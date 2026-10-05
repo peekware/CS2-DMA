@@ -1,183 +1,44 @@
 <div align="center">
-<h1>{ ... } Direct Memory Access — CS2 DMA</h1>
+<h1>CS2-DMA — Counter-Strike 2 DMA Araştırma Framework</h1>
 
-<p style="max-width: 800px;">
-An open-source software framework designed for the research and implementation of Direct Memory Access (DMA) interaction with Counter-Strike 2. The system demonstrates established methodologies for memory reading, game entity parsing, network synchronization, and data visualization. It serves as a practical platform for studying low-level programming, PCIe architecture, and reverse engineering techniques.
-</p>
-
-<p style="color: #ff6b6b; font-weight: 600; font-size: 0.95em; margin: 10px 0;">
-{ ! } This project is for educational and research purposes only <br>
-{ ! } This is an external method and requires a 
-<a href="https://github.com/ufrisk/pcileech-fpga" target="_blank">DMA Card</a> to work. <br>
-{ ! } WebSite: https://cs2-dma.github.io/CS2-DMA
+<p>
+Counter-Strike 2 ile Direct Memory Access (DMA) etkileşimi için açık kaynaklı yazılım framework'ü. Bellek okuma, oyun entity parse, ağ senkronizasyonu ve veri görselleştirme metodolojilerini içerir. Düşük seviye programlama, PCIe mimarisi ve tersine mühendislik tekniklerini incelemek için pratik bir platform.
 </p>
 
 <p>
-<a href="https://github.com/cs2-dma/CS2-DMA/releases/latest"><img src="https://img.shields.io/github/v/release/cs2-dma/CS2-DMA?style=flat-square&color=blue" alt="Latest Release"></a>
-&nbsp;&nbsp;
-<a href="https://github.com/cs2-dma/CS2-DMA/releases"><img src="https://img.shields.io/github/downloads/cs2-dma/CS2-DMA/total?style=flat-square&color=success" alt="Total Downloads"></a>
-&nbsp;&nbsp;
-<a href="https://github.com/cs2-dma/CS2-DMA/releases"><img src="https://img.shields.io/badge/Platform-Windows-lightgrey?style=flat-square" alt="Supported Platforms"></a>
-&nbsp;&nbsp;
-<a href="https://github.com/cs2-dma/CS2-DMA/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue?style=flat-square" alt="License"></a>
-<br>
-<a href="https://github.com/cs2-dma/CS2-DMA/pulse"><img src="https://img.shields.io/github/release-date/cs2-dma/CS2-DMA?style=flat-square" alt="Release Date"></a>
-&nbsp;&nbsp;
-<img src="https://img.shields.io/badge/Language-C%2B%2B-blue?style=flat-square" alt="Language">
-&nbsp;&nbsp;
-<a href="https://github.com/cs2-dma/CS2-DMA/stargazers"><img src="https://img.shields.io/github/stars/cs2-dma/CS2-DMA?style=flat-square&color=yellow" alt="Stars"></a>
+<strong>Bu proje eğitim ve araştırma amaçlıdır</strong><br>
+Harici bir yöntemdir ve çalışması için <a href="https://github.com/ufrisk/pcileech-fpga">DMA Kartı</a> gereklidir.
 </p>
-
-<img height="125" alt="Logo" src="https://github.com/user-attachments/assets/6edda043-63f4-44c1-8a1f-25f7d8b7bf5c" />
-
-<br>
-<br>
-
-<p style="font-size: 1.05em; color: #7f8c8d; margin: 20px 0;">
-<b>Are you a developer?</b> Suggest improvements to the project!<br>
-<b>Telegram:</b> <a href="https://t.me/ne_sravnim" style="text-decoration: none; color: #0088cc;">@ne_sravnim</a> &nbsp;|&nbsp;Write thanks for the project!
-</p>
-
-<p style="font-size: 1.05em; color: #7f8c8d; margin: 15px 0;">
-🖤 <b>Want to support this research?</b> Feel free to reach out via Telegram!
-</p>
-
-<p style="font-size: 1.1em;">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#" style="text-decoration: none;">
-    <b>Русская локализация</b>
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/KEV0143/Direct-memory-access-CS2-DMA/blob/main/README.md" style="text-decoration: none;">
-    <b>English Localization</b>
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#" style="text-decoration: none;">
-    <b>中文本地化</b>
-  </a>
-</p>
-<br>
-<img width="1896" height="779" alt="image" src="https://github.com/user-attachments/assets/4abf2106-e613-4dec-b024-d47fa43eea2a" />
-<p><code> The whole system. In one core. Precision in each layer. 
- Visualization of players and the world, guidance, two radars and hardware input – 
- in a single modular KevqDMA system. Is free. Open source code. </code></p>
-
-<img width="1896" height="821" alt="image" src="https://github.com/user-attachments/assets/1af65462-fdb1-4a94-9621-fa36ab61a921" />
-<img width="1884" height="594" alt="image" src="https://github.com/user-attachments/assets/21664d36-293f-4a2c-b273-50826250e672" />
-<p><code> High performance, OOP structure and precision 
- Each module is responsible for its own task. Assemble the appropriate configuration: 
- from the minimum visual layer to the radar on a separate screen. </code></p>
-
-<img width="1895" height="902" alt="image" src="https://github.com/user-attachments/assets/3cb596a5-0b32-4bc3-9aad-304cc4cdc613" />
-<p><code> See how it works on the <a href="https://cs2-dma.github.io/CS2-DMA/?lang=en" target="_blank"> WebSite </code></p>
-
-<img width="1893" height="897" alt="image" src="https://github.com/user-attachments/assets/330a6503-dc98-4ea3-8567-da03c4e938b5" />
-<p><code> Dual-worker pipeline – Camera at 300 Hz 
- Separate KevqDMA data and camera-matrix workers. 
- State exchange through SnapshotSlot [8] with atomic index publication. </code></p>
-
-<img width="1571" height="690" alt="image" src="https://github.com/user-attachments/assets/8d828043-b92b-46cb-af29-02cba1481eb6" />
-<p><code> One connected view of the system 
- Reads, snapshot publication, camera, rendering, networking and recovery in one matrix. 
- Select a node to explore its role. </code></p>
-
-<img width="1890" height="744" alt="image" src="https://github.com/user-attachments/assets/fca52aae-bec1-47b6-b42d-5d5fd0ed2e01" />
-<p><code> Quick start 
- Prepare the hardware and launch on the secondary PC. </code></p>
-
-<h2>WebRadar</h2>
-<img width="1920" height="1080" alt="WebRadar" src="https://github.com/user-attachments/assets/13d3c864-22f5-4745-99db-338cb28c5ecc" style="border-radius: 8px;" />
-<p><code> How WebRadar works: DMA reads data from CS2’s memory, sends it to a local backend, and 
- the backend streams player positions to the browser via WebSocket for map display. 
- The address in the browser points to the local web service, for example 192.168.x.x or localhost or 0.0.0.0 
- Sequence: DMA → memory reading → backend → WebSocket → map display. </code></p>
-
-<h2>ESP</h2>
-
-| **Display** | **Dichen Fuser V6** |
-| :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/d80a31e9-3797-48da-9af3-78aa48e27f3f" width="380"/> | <img src="https://github.com/user-attachments/assets/c52be22c-2df2-44e5-9e22-6885467b78b0" width="380"/> |
-| <img src="https://github.com/user-attachments/assets/27424760-5d6f-4f81-8d19-66b38f9196d5" width="380"/> | <img src="https://github.com/user-attachments/assets/1aac33bc-ad1c-4e0d-8b47-3d351513fc66" width="380"/> |
-<p><code>How ESP works: The game and the DMA Card are connected to the main PC, while the software runs on a second PC. The visual output is shown by overlaying the second display onto the main monitor using Dichen Fuser v6.
-Sequence: main PC → DMA data → second PC software → display overlay via Dichen Fuser v6.</code></p>
-
-<h2>Menu UI</h2>
-<table align="center" cellpadding="6" cellspacing="0">
-  <tr>
-    <td align="center" valign="top" width="390">
-      <b>Radar UI</b><br>
-      <img src="https://github.com/user-attachments/assets/c9ddb890-3a90-45d8-9168-112c5bcc8d47" height="300"/>
-    </td>
-    <td align="center" valign="top" width="390">
-      <b>WebRadar UI</b><br>
-      <img src="https://github.com/user-attachments/assets/f0ad880a-9e8d-4e19-bcea-5adbb2894d46" height="300"/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="390">
-      <b>Settings / Debug UI</b><br>
-      <img src="https://github.com/user-attachments/assets/191a62a4-a8c8-4104-9c9c-cda822c8bca0" height="190"/>
-    </td>
-    <td align="center" valign="top" width="390">
-      <b>Main Start UI</b><br>
-      <img src="https://github.com/user-attachments/assets/07b3b3ff-d8f2-456a-9350-c7c47e8c0db9" height="190"/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2">
-      <b>ESP UI</b><br>
-      <img src="https://github.com/user-attachments/assets/b418ac93-01ed-4991-8eee-b26b58e7c7ac" width="790"/>
-    </td>
-  </tr>
-</table>
-<p>
-<code>Radar UI</code>
-<code>Live session overview with tracked data, status, and radar controls.</code>
-
-<code>WebRadar UI</code>
-<code>Browser access panel with connection setup, quick actions, and session info.</code>
-
-<code>Settings / Debug UI</code>
-<code>Advanced settings and diagnostics for tuning, debugging, and state verification.</code>
-
-<code>Main Start UI</code>
-<code>Launch log for connection, version checks, offsets, initialization, and readiness.</code>
-
-<code>ESP UI</code>
-<code>ESP visual settings for toggles, previews, layouts, and colors.</code>
-</p>
-<h2>Hardware Setup</h2>
-
-<p style="max-width: 850px;">
-This project was tested with a dedicated DMA hardware configuration based on the 
-<b>Captain DMA 75T v3.0</b> card.  
-The card is configured with <b>No-Show M2 SSD Disk (Stealth Firmware)</b>, which is used as the firmware profile for this research setup.
-</p>
-
-<p style="color: #f39c12; font-weight: 600; font-size: 0.95em; margin: 10px 0;">
-{ ! } Hardware behavior, firmware compatibility, and system stability may vary depending on your motherboard, BIOS settings, PCIe layout, and operating system environment.
-<br>
- Tested build: Windows 11 Pro (25H2) + Ryzen 9 9950X3D + X870 AORUS Elite motherboard (F10).
-</p>
-
-<table align="center" cellpadding="6" cellspacing="0">
-  <tr>
-    <td align="center" valign="top" width="390">
-      <b>Captain DMA 75T v3.0</b><br>
-      <img src="https://github.com/user-attachments/assets/1094dc7c-8008-4dc3-8815-0c960d838050" width="380" height="502" style="border-radius: 8px;"/>
-    </td>
-    <td align="center" valign="top" width="390">
-      <b>No-Show M2 SSD Disk Firmware</b><br>
-      <img src="https://github.com/user-attachments/assets/9695af49-b48c-47b2-ad4a-46c79e760d63" width="380" height="502" style="border-radius: 8px;"/>
-    </td>
-  </tr>
-</table>
-
-<p>
-<code> Captain DMA 75T v3.0 is used as the external PCIe-based memory access device in this research setup. 
- It provides the hardware layer required for DMA interaction and external memory reading experiments. </code>
-
-<code> The setup also uses several runtime DLL components; updates and documentation can be reviewed through the official project pages: <a href="https://ftdichip.com/drivers/d3xx-drivers/" target="_blank">FTD3XX.dll</a>, <a href="https://github.com/ufrisk/MemProcFS" target="_blank">vmm.dll </a>, and <a href="https://github.com/ufrisk/LeechCore" target="_blank">leechcore.dll</a></code>
-</p>
-<br>
 </div>
+
+---
+
+## Özellikler
+
+- **Bellek Okuma** — DMA kartı üzerinden CS2 süreç belleğine doğrudan erişim
+- **Entity Parse** — oyuncu konumları, sağlık, silah bilgileri, takım verileri
+- **Ağ Senkronizasyonu** — çoklu PC kurulumu için veri aktarımı
+- **Veri Görselleştirme** — radar, ESP ve harita üzerinde canlı veri
+- **PCIe Araştırma** — DMA kartı firmware'ı ve PCIe protokol deneyleri
+
+## Gereksinimler
+
+- DMA kartı (pcileech uyumlu FPGA)
+- İkinci PC (DMA okuma için)
+- Windows 10/11
+- Visual Studio 2022+
+
+## Derleme
+
+```bash
+# Visual Studio ile çözümü aç
+# KevqDMA.slnx → Release x64 → Build
+```
+
+## Yapı
+
+```
+src/           — kaynak kod
+include/       — başlık dosyaları
+docs/          — dokümantasyon
+```
