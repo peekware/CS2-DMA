@@ -42,3 +42,9 @@ src/           — kaynak kod
 include/       — başlık dosyaları
 docs/          — dokümantasyon
 ```
+
+---
+
+## İletişim
+
+Discord: [https://discord.gg/vU7PNVr8vk](https://discord.gg/vU7PNVr8vk)
