@@ -47,4 +47,4 @@ docs/          — dokümantasyon
 
 ## İletişim
 
-Discord: [https://discord.gg/vU7PNVr8vk](https://discord.gg/vU7PNVr8vk)
+Discord: [https://discord.gg/CNtdPshppv](https://discord.gg/CNtdPshppv)
